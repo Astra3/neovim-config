@@ -11,7 +11,7 @@ local lsp_attach = function(client, bufnr)
   vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
   vim.keymap.set({'n', 'i'}, '<C-p>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
   vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-  vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+  vim.keymap.set("n", "<A-CR>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 end
 
 lsp_zero.extend_lspconfig({
@@ -28,5 +28,5 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-lsp_zero.setup_servers({"clangd", "pylsp", "ruff", "typst_lsp", "svelte", "html" })
+lsp_zero.setup_servers({"clangd", "pylsp", "ruff", "typst_lsp", "svelte", "html", "cssls" })
 

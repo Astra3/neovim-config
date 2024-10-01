@@ -40,7 +40,7 @@ vim.keymap.set('n', '<A-é>', '<Cmd>BufferLast<CR>')
 vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>')
 vim.keymap.set('n', '<A-w>', '<Cmd>BufferClose<CR>')
 
-vim.keymap.set('n', '<F4>', '<Cmd>lua require(\"conform\").format()<CR>', opts)
+vim.keymap.set('n', '<F3>', '<Cmd>lua require(\"conform\").format()<CR>', opts)
 
 vim.keymap.set({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
 vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
