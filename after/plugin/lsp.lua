@@ -28,5 +28,5 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-lsp_zero.setup_servers({"clangd", "pylsp", "ruff", "typst_lsp", "svelte", "html", "cssls" })
+lsp_zero.setup_servers({"clangd", "pylsp", "ruff", "typst_lsp", "svelte", "html", "cssls", "cmake" })
 

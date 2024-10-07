@@ -6,4 +6,22 @@ return {
     { "ggandor/leap.nvim", opts = {} },
     { 'numToStr/Comment.nvim', opts = {} },
     { "m4xshen/autoclose.nvim", opts = {} },
+    {
+      'vyfor/cord.nvim',
+      build = './build || .\\build',
+      event = 'VeryLazy',
+      opts = {
+          idle = {
+              show_status = false,
+          },
+      },
+    },
+    {
+        "okuuva/auto-save.nvim",
+        opts = {
+            trigger_events = {
+                defer_save = {},
+            },
+        },
+    },
 }
