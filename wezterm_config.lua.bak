@@ -1,0 +1,25 @@
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Neon Night (Gogh)'
+config.enable_scroll_bar = true
+config.window_padding = {
+    left = 0,
+    right = "2pt",
+    top = 0,
+    bottom = 0,
+}
+config.font = wezterm.font_with_fallback {
+    "RecMonoSmCasual Nerd Font",
+    "codicon",
+}
+config.font_size = 11.5
+-- and finally, return the configuration to wezterm
+return config
+
