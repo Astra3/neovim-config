@@ -14,6 +14,7 @@ vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
 vim.keymap.set("n", "<leader>P", [["+P]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<C-/>", ":noh<CR>")
 
 -- vim.keymap.set("i", "\"", "\"\"<left>")
 -- vim.keymap.set("i", "'", "''<left>")
@@ -40,7 +41,7 @@ vim.keymap.set('n', '<A-é>', '<Cmd>BufferLast<CR>')
 vim.keymap.set('n', '<A-p>', '<Cmd>BufferPin<CR>')
 vim.keymap.set('n', '<A-w>', '<Cmd>BufferClose<CR>')
 
-vim.keymap.set('n', '<F3>', '<Cmd>lua require(\"conform\").format()<CR>', opts)
+vim.keymap.set('n', '<F3>', '<Cmd>lua require(\"conform\").format()<CR>')
 
 vim.keymap.set({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
 vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')

@@ -27,6 +27,10 @@ return {
                 typescript = { "prettierd", "prettier", stop_after_first = true },
                 svelte = { "prettierd", "prettier", stop_after_first = true },
                 typst = { "typstfmt" },
+                ["_"] = {},
+            },
+            default_format_opts = {
+                lsp_format = "fallback",
             },
         }
     },

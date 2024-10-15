@@ -9,7 +9,7 @@ return {
             require("nvim-treesitter.install").update({ with_sync = true })()
         end,
         opts = {
-            ensure_installed = { "c", "cpp", "html", "css", "svelte", "typst", "cmake", "toml", "yaml", "xml", "rust", "python", "nasm", "typescript", "javascript", "all" },
+            ensure_installed = { "c", "cpp", "html", "css", "svelte", "typst", "cmake", "toml", "yaml", "xml", "rust", "python", "nasm", "typescript", "javascript", "glsl" },
             sync_install = false,
             auto_install = true,
             highlight = {
