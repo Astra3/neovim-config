@@ -18,6 +18,7 @@ lsp_zero.extend_lspconfig({
   sign_text = true,
   lsp_attach = lsp_attach,
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
+  offset_encoding = "utf-8",
 })
 
 vim.diagnostic.config({
