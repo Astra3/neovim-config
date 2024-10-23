@@ -12,7 +12,7 @@ return {
         lazy = false,
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = { "c", "cpp", "html", "css", "svelte", "typst", "cmake", "toml", "yaml", "xml", "rust", "python", "nasm", "typescript", "javascript", "glsl" },
+                ensure_installed = { "c", "cpp", "html", "css", "svelte", "typst", "cmake", "toml", "yaml", "xml", "rust", "python", "nasm", "typescript", "javascript" },
                 sync_install = false,
                 auto_install = true,
                 highlight = {
