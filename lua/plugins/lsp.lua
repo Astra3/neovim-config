@@ -57,11 +57,6 @@ return {
             })
         end,
     },
-    {
-        "pmizio/typescript-tools.nvim",
-        dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-        opts = {},
-    },
     { "p00f/clangd_extensions.nvim" },
     { "mfussenegger/nvim-dap" },
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}, opts = {} },
