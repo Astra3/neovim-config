@@ -30,14 +30,15 @@ vim.diagnostic.config({
 })
 
 local nvim_lsp = require("lspconfig")
-nvim_lsp.denols.setup {
-    root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
-}
-
 nvim_lsp.ts_ls.setup {
     root_dir = nvim_lsp.util.root_pattern("package.json"),
     single_file_support = false,
 }
 
-lsp_zero.setup_servers({"clangd", "pylsp", "ruff", "typst_lsp", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls", "glsl_analyzer", "ts_ls" })
+nvim_lsp.tinymist.setup {
+    offset_encoding = "utf-8",
+    single_file_support = true,
+}
+
+lsp_zero.setup_servers({"clangd", "pylsp", "ruff", "tinymist", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls", "glsl_analyzer", "ts_ls" })
 
