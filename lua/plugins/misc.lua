@@ -8,8 +8,7 @@ return {
     { "m4xshen/autoclose.nvim",            opts = {} },
     {
         'vyfor/cord.nvim',
-        build = './build || .\\build',
-        event = 'VeryLazy',
+        build = ':Cord update',
         opts = {
             idle = {
                 show_status = false,
