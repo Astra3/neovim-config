@@ -43,9 +43,8 @@ nvim_lsp.ts_ls.setup {
 }
 
 nvim_lsp.tinymist.setup {
-    offset_encoding = "utf-8",
     single_file_support = true,
 }
 
-lsp_zero.setup_servers({ "clangd", "pylsp", "ruff", "tinymist", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls",
+lsp_zero.setup_servers({ "clangd", "jedi_language_server", "ruff", "tinymist", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls",
     "glsl_analyzer", "ts_ls" })
