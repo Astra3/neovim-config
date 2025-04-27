@@ -46,5 +46,5 @@ nvim_lsp.tinymist.setup {
     single_file_support = true,
 }
 
-lsp_zero.setup_servers({ "clangd", "jedi_language_server", "ruff", "tinymist", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls",
+lsp_zero.setup_servers({ "clangd", "pyright", "ruff", "tinymist", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls",
     "glsl_analyzer", "ts_ls" })
