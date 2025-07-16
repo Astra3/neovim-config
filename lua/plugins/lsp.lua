@@ -1,17 +1,9 @@
 return {
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v4.x',
-        dependencies = {
-            {'neovim/nvim-lspconfig'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/nvim-cmp'},
-        }
-    },
+    { "neovim/nvim-lspconfig" },
     {
         'mrcjkb/rustaceanvim',
-        version = '^5', -- Recommended
-        lazy = false, -- This plugin is already lazy
+        version = '^6', -- Recommended
+        lazy = false,   -- This plugin is already lazy
     },
     {
         "stevearc/conform.nvim",
@@ -47,8 +39,8 @@ return {
             },
         },
     },
-    { "Bilal2453/luvit-meta", lazy = true }, -- optional `vim.uv` typings
-    { -- optional completion source for require statements and module annotations
+    { "Bilal2453/luvit-meta",       lazy = true }, -- optional `vim.uv` typings
+    {                                              -- optional completion source for require statements and module annotations
         "hrsh7th/nvim-cmp",
         opts = function(_, opts)
             opts.sources = opts.sources or {}
@@ -57,14 +49,14 @@ return {
                 group_index = 0, -- set group index to 0 to skip loading LuaLS completions
             })
         end,
+        dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "petertriho/cmp-git", "hrsh7th/cmp-path" }
     },
     { "p00f/clangd_extensions.nvim" },
     { "mfussenegger/nvim-dap" },
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}, opts = {} },
+    { "rcarriga/nvim-dap-ui",       dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }, opts = {} },
     {
         "chomosuke/typst-preview.nvim",
         opts = {},
         ft = "typst",
     }
 }
-

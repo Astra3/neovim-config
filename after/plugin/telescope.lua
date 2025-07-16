@@ -7,5 +7,5 @@ vim.keymap.set('n', '<leader>gr', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<S-a>', builtin.lsp_document_symbols, { desc = 'Telescope LSP symbol search' })
 vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'Telescope LSP references' })
 vim.keymap.set('n', '<F4>', builtin.lsp_definitions, { desc = 'Telescope LSP definitions' })
-vim.keymap.set('n', '<leader>ft', function() builtin.live_grep { default_text="FIXME|TODO" } end, { desc = "Grep FIXME/TODO" })
-
+vim.keymap.set('n', '<leader>ft', function() builtin.live_grep { default_text = "FIXME|TODO" } end,
+    { desc = "Grep FIXME/TODO" })

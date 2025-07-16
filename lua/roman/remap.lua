@@ -13,26 +13,20 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank Line to Clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]], { desc = "Paste from Clipboard" })
 vim.keymap.set("n", "<leader>P", [["+P]], { desc = "Paste from Clipboard" })
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Search and Replace Word Under Cursor" })
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Search and Replace Word Under Cursor" })
 vim.keymap.set("n", "<C-/>", ":noh<CR>", { desc = "Cancel Search Highlight" })
 
 vim.keymap.set("n", "<A-c>", ":foldclose<CR>", { desc = "Fold Close" })
 
-vim.keymap.set({"n", "v"}, "j", "gj")
-vim.keymap.set({"n", "v"}, "<Down>", "gj")
-vim.keymap.set({"n", "v"}, "k", "gk")
-vim.keymap.set({"n", "v"}, "<Up>", "gk")
+vim.keymap.set({ "n", "v" }, "j", "gj")
+vim.keymap.set({ "n", "v" }, "<Down>", "gj")
+vim.keymap.set({ "n", "v" }, "k", "gk")
+vim.keymap.set({ "n", "v" }, "<Up>", "gk")
 
 vim.keymap.set("n", "<leader>i", function()
     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle LSP Inlay Hints" })
-
--- vim.keymap.set("i", "\"", "\"\"<left>")
--- vim.keymap.set("i", "'", "''<left>")
--- vim.keymap.set("i", "(", "()<left>")
--- vim.keymap.set("i", "[", "[]<left>")
--- vim.keymap.set("i", "{", "{}<left>")
--- vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O")
 
 vim.keymap.set("n", "<Tab>", "<Cmd>BufferNext<CR>", { desc = "Go To Next Buffer" })
 vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferPrevious<CR>", { desc = "Go To Previous Buffer" })
@@ -56,3 +50,15 @@ vim.keymap.set('n', '<F3>', '<Cmd>lua require(\"conform\").format()<CR>', { desc
 
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)', { desc = "Search Two Chars Forward" })
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)', { desc = "Search Two Chars Backward" })
+
+-- LSP remaps
+
+vim.keymap.set({ 'n', 'i' }, '<C-q>', vim.lsp.buf.hover, { desc = "LSP Documentation" })
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = "LSP Jump to Declaration" })
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { desc = "LSP Jump to Implementation" })
+vim.keymap.set('n', 'go', vim.lsp.buf.type_definition,
+    { desc = "LSP Jump to Type Definition (use Telescope instead!)" })
+vim.keymap.set({ 'n', 'i' }, '<C-p>', vim.lsp.buf.signature_help,
+    { desc = "LSP Signature Help (in parenthesis and stuff)" })
+vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { desc = "LSP Rename Symbol" })
+vim.keymap.set("n", "<A-CR>", vim.lsp.buf.code_action, { desc = "LSP Code Actions (quick fixes)" })
