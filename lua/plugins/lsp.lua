@@ -56,7 +56,12 @@ return {
     { "rcarriga/nvim-dap-ui",       dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }, opts = {} },
     {
         "chomosuke/typst-preview.nvim",
-        opts = {},
+        opts = {
+            dependencies_bin = {
+                ['tinymist'] = "/usr/bin/tinymist",
+                ['websocat'] = "/usr/bin/websocat",
+            }
+        },
         ft = "typst",
     }
 }
