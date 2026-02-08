@@ -1,3 +1,3 @@
-function llsp --wraps='llama-server --port 8080 --models-preset presets.ini --models-max 1 --jinja --mmap' --description 'alias llsp=llama-server --port 8080 --models-preset presets.ini --models-max 1 --jinja --mmap'
-    llama-server --port 8080 --models-preset ~/.cache/llama.cpp/llama_presets.ini --models-max 1 --jinja --mmap $argv
+function llsp --wraps='xdg-open localhost:8080 llama-server --port 8080 --models-preset ~/.cache/llama.cpp/llama_presets.ini --models-max 1 --jinja --mmap' --wraps='xdg-open localhost:8080 && llama-server --port 8080 --models-preset ~/.cache/llama.cpp/llama_presets.ini --models-max 1 --jinja --mmap' --description 'alias llsp=xdg-open localhost:8080 && llama-server --port 8080 --models-preset ~/.cache/llama.cpp/llama_presets.ini --models-max 1 --jinja --mmap'
+    xdg-open localhost:8080 && llama-server --port 8080 --models-preset ~/.cache/llama.cpp/llama_presets.ini --models-max 1 --jinja --mmap $argv
 end
