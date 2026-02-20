@@ -49,4 +49,18 @@ return {
         init = function() vim.g.barbar_auto_setup = false end,
         opts = {}
     },
+    {
+        'jedrzejboczar/possession.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim'
+        },
+        opts = {
+            autosave = {
+                current = true,
+                cwd = true,
+            },
+            autoload = "auto_cwd"
+        }
+    },
+
 }

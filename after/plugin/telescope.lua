@@ -9,3 +9,6 @@ vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'Telescope LSP refere
 vim.keymap.set('n', '<F4>', builtin.lsp_definitions, { desc = 'Telescope LSP definitions' })
 vim.keymap.set('n', '<leader>ft', function() builtin.live_grep { default_text = "FIXME|TODO" } end,
     { desc = "Grep FIXME/TODO" })
+
+require("telescope").load_extension("possession")
+

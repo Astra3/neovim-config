@@ -1,5 +1,5 @@
 local servers = { "clangd", "pyright", "ruff", "tinymist", "svelte", "html", "cssls", "cmake", "lua_ls", "jsonls",
-    "glsl_analyzer", "ts_ls" }
+    "glsl_analyzer", "ts_ls", "asm_lsp" }
 
 vim.diagnostic.config({
     virtual_text = true,
