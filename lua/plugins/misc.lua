@@ -33,4 +33,13 @@ return {
             }
         end
     },
+    {
+        "kylechui/nvim-surround",
+        version = "^4.0.0",
+        event = "VeryLazy",
+    },
+    {
+        "Kicamon/markdown-table-mode.nvim",
+        opts = {}
+    }
 }
