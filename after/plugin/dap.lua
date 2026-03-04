@@ -22,16 +22,11 @@ vim.keymap.set("n", "<F6>", dap.step_out, { desc = "Step Out" })
 
 vim.keymap.set("n", "<C-<F10>>", dap.restart, { desc = "Debug Restart" })
 
-dap.adapters.codelldb = {
-  type = 'server',
-  port = "${port}",
-  executable = {
-    -- CHANGE THIS to your path!
-    command = '/home/roman/.local/share/nvim/mason/bin/codelldb',
-    args = {"--port", "${port}"},
-
-    -- On windows you may have to uncomment this:
-    -- detached = false,
-  }
+dap.adapters.cppdbg = {
+  id = 'cppdbg',
+  type = 'executable',
+  command = '/usr/bin/cppdbg',
+  -- on windows, there should be detached = false
 }
+
 
