@@ -9,24 +9,9 @@ return {
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        build = function()
-            require("nvim-treesitter.install").update({ with_sync = true })()
-        end,
+        build = ":TSUpdate",
         lazy = false,
-        config = function()
-            require("nvim-treesitter.configs").setup({
-                ensure_installed = { "c", "cpp", "html", "css", "svelte", "typst", "cmake", "toml", "yaml", "xml", "rust", "python", "nasm", "typescript", "javascript" },
-                sync_install = false,
-                auto_install = true,
-                highlight = {
-                    enable = true,
-                    additional_vim_regex_highlighting = false,
-                },
-                -- indent = { enable = true },
-                ignore_install = {},
-                modules = {},
-            })
-        end
+        branch = "main",
     },
     { "mbbill/undotree" },
     {

@@ -37,3 +37,9 @@ vim.opt.splitbelow = true
 
 vim.lsp.inlay_hint.enable()
 
+-- neovide stuff
+if vim.g.neovide then
+    vim.g.neovide_cursor_animation_length = 0
+    vim.o.guifont = "RecMonoSmCasual Nerd Font,codicon:h11.5"
+end
+
