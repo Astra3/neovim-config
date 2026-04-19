@@ -8,13 +8,6 @@ return {
         },
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        lazy = false,
-        branch = "main",
-    },
-    { "mbbill/undotree" },
-    {
         'stevearc/oil.nvim',
         ---@module 'oil'
         ---@type oil.SetupOpts
