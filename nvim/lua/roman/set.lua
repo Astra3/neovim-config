@@ -1,3 +1,4 @@
+-- line number
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -42,4 +43,9 @@ if vim.g.neovide then
     vim.g.neovide_cursor_animation_length = 0
     vim.o.guifont = "RecMonoSmCasual Nerd Font,codicon:h11.5"
 end
+
+-- packadd some pacakges
+vim.cmd("packadd termdebug")
+vim.cmd("packadd nvim.undotree")
+
 
