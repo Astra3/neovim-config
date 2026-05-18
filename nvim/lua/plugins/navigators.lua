@@ -31,17 +31,14 @@ return {
         opts = {}
     },
     {
-        'jedrzejboczar/possession.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim'
-        },
+        "romus204/tree-sitter-manager.nvim",
+        dependencies = {}, -- tree-sitter CLI must be installed system-wide
         opts = {
-            autosave = {
-                current = true,
-                cwd = true,
-            },
-            autoload = "auto_cwd"
+            auto_install = true,
         }
     },
-
+    {
+        'stevearc/resession.nvim',
+        opts = {},
+    }
 }

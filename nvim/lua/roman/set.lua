@@ -45,7 +45,6 @@ if vim.g.neovide then
 end
 
 -- packadd some pacakges
-vim.cmd("packadd termdebug")
-vim.cmd("packadd nvim.undotree")
-
+vim.cmd.packadd("termdebug")
+vim.cmd.packadd("nvim.undotree")
 

@@ -51,6 +51,8 @@ vim.keymap.set('n', '<F3>', '<Cmd>lua require(\"conform\").format()<CR>', { desc
 vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)', { desc = "Search Two Chars Forward" })
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)', { desc = "Search Two Chars Backward" })
 
+vim.keymap.set('n', "<F5>", '<Cmd>Undotree<CR>', { desc = "Toggle Undotree" })
+
 -- LSP remaps
 
 vim.keymap.set({ 'n', 'i' }, '<C-q>', vim.lsp.buf.hover, { desc = "LSP Documentation" })
