@@ -22,10 +22,9 @@ vim.keymap.set("n", "<F6>", dap.step_out, { desc = "Step Out" })
 
 vim.keymap.set("n", "<C-<F10>>", dap.restart, { desc = "Debug Restart" })
 
-dap.adapters.cppdbg = {
-  id = 'cppdbg',
-  type = 'executable',
-  command = '/usr/bin/cppdbg',
+dap.adapters.codelldb = {
+    type = "executable",
+    command = "/home/roman/.local/share/nvim/mason/packages/codelldb/codelldb",
   -- on windows, there should be detached = false
 }
 
